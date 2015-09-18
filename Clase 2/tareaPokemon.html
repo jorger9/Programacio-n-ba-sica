@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 <meta charset ="utf-8">
@@ -6,6 +6,24 @@
 	<title>Tarea pokemon</title>
 </head>
 <body>
-
+	<article>
+		<form>
+			<select name="pokemon" id="selectPokemon" required>
+				<option  value="" selected="selected">Elije el nombre del pokemon</option>
+				<option value="0">Pikachu</option>
+				<option value="1">Bulbasur</option>
+				<option value="2">Rattata</option>
+			</select>
+			<input type="button" value="buscar" id="botonBuscar">
+		</form>
+	</article>
+	<article>
+		<img src="" id="imgPokemon" width="80">
+		<h2 id="nombrePokemon"></h2>
+		<p id="datosPokemon"></p>
+	</article>
+	<script type="text/javascript">
+		inicio();
+	</script>
 </body>
 </html>
