@@ -1,6 +1,6 @@
-function Pokemon(n,v,a)
+function Pokemon(n,v,a,g)
 {
-    this.grito = "Pika!";
+    this.grito = g;
     this.nombre = n;
     this.vida = v;
     this.ataque = a;
@@ -21,7 +21,7 @@ function inicio()
                             vida   : 100        
                         },
                         {
-                            nombre : "Bulbasur",
+                            nombre : "Bulbasaur",
                             grito  : "Bul!",
                             ataque : 55,
                             vida   : 100     
@@ -44,7 +44,14 @@ function inicio()
 
     function getPokemon()
     {
-        console.log(pokemons[selectPokemon.value]);
+        //console.log(pokemons[selectPokemon.value]);
+        var p=pokemons[selectPokemon.value];
+        var poke = new Pokemon(p.nombre, p.vida, p.ataque,p.grito);
+        var datos ="vida: " + poke.vida+"\n"+"\nataque: "+poke.ataque;
+        poke.vida = poke.vida - 13;
+        nombrePokemon.textContent = poke.nombre;
+        datosPokemon.textContent=datos;
+        imgPokemon.src=poke.imagen; 
     }
 }
 
